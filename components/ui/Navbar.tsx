@@ -1,19 +1,17 @@
-import { AppBar, IconButton, Toolbar, Typography } from "@mui/material"
-import { FC, useContext } from "react"
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import { UIContext } from "../../context/ui";
+import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
+import { FC, useContext } from 'react'
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
+import { UIContext } from '../../context/ui'
 
-export const Navbar:FC = () => {
-  const {openSideMenu} = useContext(UIContext)
+export const Navbar: FC = () => {
+  const { openSideMenu } = useContext(UIContext)
   return (
-    <AppBar position="sticky" >
+    <AppBar position="sticky">
       <Toolbar>
         <IconButton size="large" edge="start" onClick={openSideMenu}>
-          <MenuOutlinedIcon/>
+          <MenuOutlinedIcon />
         </IconButton>
-        <Typography variant="h6">
-          OpenJira
-        </Typography>
+        <Typography variant="h6">OpenJira</Typography>
       </Toolbar>
     </AppBar>
   )
