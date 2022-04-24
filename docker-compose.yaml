@@ -1,0 +1,9 @@
+
+services:
+  entriesdb:
+    image: mongo:5.0.7
+    container_name: entries-db
+    ports:
+      - 27030:27017
+    volumes:
+      - /home/germanhornus/Desktop/db-OpenJira:/data/db
